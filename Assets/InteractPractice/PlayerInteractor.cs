@@ -4,16 +4,20 @@ public class PlayerInteractor : MonoBehaviour
 {
     private CircleCollider2D circleCollider;
     private Item inRangeItem;
+    private IInteractable interactor;
 
-    private void Awake() {
+    private void Awake()
+    {
         circleCollider = GetComponent<CircleCollider2D>();
         inRangeItem = null;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Interactable")){
-            inRangeItem = collision.GetComponent<Item>();
+        if (collision.CompareTag("Interactable"))
+        {
+            // inRangeItem = collision.GetComponent<Item>();
+            interactor = collision.GetComponent<IInteractable>();
         }
     }
 
@@ -23,8 +27,11 @@ public class PlayerInteractor : MonoBehaviour
     }
 
     private void Update() {
-        if (inRangeItem && Input.GetKeyDown(KeyCode.F)){
-            inRangeItem.Interact();
+        // if (inRangeItem && Input.GetKeyDown(KeyCode.F)){
+        //     inRangeItem.Interact();
+        // }
+        if (interactor != null && Input.GetKeyDown(KeyCode.F)){
+            interactor.Interact();
         }
 
     }
