@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mika_Icon_0: -5605040174550431889
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

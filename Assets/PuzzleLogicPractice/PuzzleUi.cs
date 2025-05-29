@@ -4,7 +4,6 @@ using UnityEngine.Events;
 
 public abstract class PuzzleUi : MonoBehaviour
 {
-    protected PuzzleLogic generalPuzzleLogic;
     private Action onClose;
     [SerializeField] private GameObject gui;
 
@@ -23,5 +22,6 @@ public abstract class PuzzleUi : MonoBehaviour
     {
         onClose = onCloseEvent;
     }
-    public PuzzleLogic getPuzzleLogic() { return generalPuzzleLogic; }
+    
+    abstract public PuzzleLogic getPuzzleLogic();
 }

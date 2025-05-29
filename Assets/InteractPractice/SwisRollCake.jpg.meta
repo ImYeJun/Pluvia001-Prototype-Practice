@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SwisRollCake_0: 893179777431570597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
